@@ -9,7 +9,7 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background: url('Screenshot 2024-12-25 184734.png') no-repeat center center fixed;
+            background: url('background.jpg') no-repeat center center fixed;
             background-size: cover;
             color: white;
         }
@@ -19,20 +19,16 @@
             left: 10px;
             width: 120px;
         }
-        .container {
-            text-align: center;
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             padding: 20px;
         }
-        .search-bar {
-            margin: 20px auto;
-            padding: 10px;
-            width: 50%;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-        }
         .all-items {
-            margin-top: 20px;
+            position: absolute;
+            top: 20px;
+            left: 150px;
             padding: 10px 20px;
             font-size: 18px;
             background-color: #4caf50;
@@ -43,14 +39,26 @@
         .all-items:hover {
             background-color: #45a049;
         }
+        .search-bar-container {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+        .search-bar {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
-    <img src="Screenshot 2024-12-25 181915.png" alt="kya hua" class="logo">
-    <div class="container">
-        <h1>Welcome to PCS Infragold</h1>
+    <img src="logo.png" alt="PCS Infragold Logo" class="logo">
+    <button class="all-items" onclick="viewAllItems()">All Items</button>
+    <div class="search-bar-container">
         <input type="text" class="search-bar" placeholder="Enter Category Code">
-        <button class="all-items" onclick="viewAllItems()">All Items</button>
     </div>
     <script>
         function viewAllItems() {
